@@ -1,0 +1,63 @@
+.container3 {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 100px;
+}
+.container3 .cont3 {
+  width: 80%;
+  overflow: hidden;
+  text-align: center;
+  font-size: calc(16px + 1vh);
+}
+@media screen and (min-width: 992px) {
+  .container3 .cont3 {
+    width: 60%;
+    overflow: hidden;
+    text-align: center;
+    font-size: calc(19px + 1vh);
+  }
+}
+
+.logos {
+  width: 100%;
+  height: 150px;
+}
+.logos .conIcons {
+  width: 33.33333%;
+  height: 100%;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.logos .conIcons img {
+  width: 50px;
+}
+
+@media screen and (min-width: 992px) {
+  .logos {
+    width: 40%;
+    margin: 0 auto;
+  }
+  .logos .conIcons {
+    width: 33.33333%;
+    height: 100%;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: 0.2s;
+  }
+  .logos .conIcons img {
+    width: 22%;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  .logos .conIcons img:hover {
+    transform: scale(1.15);
+  }
+}
+
+/*# sourceMappingURL=container3.css.map */

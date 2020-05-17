@@ -1,0 +1,47 @@
+.container4 {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.container4 .cont4 {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+.container4 .cont4 .tittleCont4 {
+  display: block;
+  font-size: calc(18px + 3vh);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  margin-bottom: 50px;
+}
+.container4 .cont4 .cono {
+  color: #333333;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: calc(12px + 1vh);
+  margin: 2px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+.container4 .cont4 i {
+  margin-top: 10px;
+  text-align: center;
+  display: block;
+}
+@media screen and (min-width: 992px) {
+  .container4 .cont4 {
+    width: 60%;
+  }
+  .container4 .cont4 .tittleCont4 {
+    font-size: calc(20px + 3vh);
+    font-weight: 900;
+  }
+  .container4 .cont4 .cono {
+    font-size: calc(19px + 1vh);
+    font-weight: 400;
+  }
+}
+
+/*# sourceMappingURL=container4.css.map */

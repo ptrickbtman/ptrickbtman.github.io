@@ -1,0 +1,29 @@
+@mixin centrado {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.container2 {
+    width: 100%;
+    height: 200px;
+    .cont2 {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        marquee {
+            margin: 0 auto;
+            width: 100%;
+            height: calc(50px + 2vh);
+            transform: rotate(-15deg);
+            font-size: calc(25px + 2vh);
+            color: #333333;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+        .maque1 {
+            display: block;
+        }
+    }
+}
