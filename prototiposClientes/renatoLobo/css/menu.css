@@ -1,0 +1,298 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+p,
+a,
+button,
+input,
+div,
+H1,
+h1 {
+  font-family: "Quicksand", sans-serif;
+}
+
+.load {
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: #0e5cc0;
+  transition: 0.4s;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+}
+.load .contLoad {
+  widows: 100%;
+}
+.load .contLoad .circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border-top: 1px solid white;
+  animation: spinner 900ms infinite linear;
+}
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.menu {
+  height: 75px;
+  width: 100%;
+  position: fixed;
+  z-index: 19;
+  top: 0;
+  background-color: #0e5cc0;
+}
+.menu .hamburger {
+  width: 90px;
+  height: 100%;
+  float: right;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+.menu .hamburger .stick {
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background-color: white;
+  transition: 0.6s;
+}
+.menu .hamburger .stick1 {
+  transform: translate(0px, -10px);
+}
+.menu .hamburger .stick3 {
+  transform: translate(0px, 10px);
+}
+.menu .hamburger .stick1On {
+  transform: translate(0px, 0px) rotate(-45deg);
+}
+.menu .hamburger .stick2On {
+  opacity: 0;
+}
+.menu .hamburger .stick3On {
+  transform: translate(0px, 0px) rotate(45deg);
+}
+.menu .items {
+  position: fixed;
+  z-index: 16;
+  height: calc(100% - 72px);
+  right: 0;
+  width: 0%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  transition: 0.6s;
+  transform: translateY(74px);
+}
+.menu .items .contItem {
+  width: 90%;
+  text-align: right;
+  opacity: 0;
+  transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition-delay: 0.4s;
+}
+.menu .items .contItem .item {
+  width: 100%;
+  font-size: 24px;
+  color: #fff;
+  margin-top: 4px;
+}
+.menu .items .contItemOn {
+  opacity: 1;
+}
+.menu .itemsOn {
+  width: 100%;
+  opacity: 1;
+  background-color: #0e5cc0;
+}
+.menu .logo {
+  position: fixed;
+  height: 75px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-left: 20px;
+}
+.menu .logo .contLogo {
+  color: white;
+}
+.menu .logo .contLogo i {
+  display: inline-block;
+  font-size: 20px;
+}
+.menu .logo .contLogo img {
+  height: 70px;
+}
+.menu .logo .contLogo p {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 20px;
+}
+@media screen and (min-width: 992px) {
+  .menu .hamburger {
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+  }
+  .menu .hamburger .stick {
+    width: 0px;
+    height: 0px;
+  }
+  .menu .items {
+    position: fixed;
+    height: 75px;
+    width: 100%;
+    opacity: 1;
+    transition: 0.6s;
+    transform: translateY(0px);
+  }
+  .menu .items .contItem {
+    width: 100%;
+    text-align: right;
+    opacity: 1;
+    float: right;
+  }
+  .menu .items .contItem .item {
+    width: 14%;
+    height: 25px;
+    font-size: 19px;
+    text-align: center;
+    color: #fff;
+    margin-top: 6px;
+    display: inline-block;
+    margin-right: 2px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .menu .items .contItem .item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+  }
+  .menu .items .contItem .itemSe:hover .itemsServicios {
+    width: 100%;
+  }
+  .menu .items .contItemOn {
+    opacity: 1;
+  }
+  .menu .itemsOn {
+    width: 100%;
+  }
+}
+
+.itemsServicios {
+  transition: 0.6s;
+  width: 0%;
+  overflow: hidden;
+  top: 55px;
+  position: fixed;
+  right: 0;
+  background-color: #0e5cc0;
+  z-index: 100;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.itemsServicios .subItemServicio {
+  width: 90%;
+  text-align: right;
+  color: white;
+}
+.itemsServicios .subItemServicio p {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+@media screen and (min-width: 992px) {
+  .itemsServicios .subItemServicio {
+    width: 90%;
+    text-align: center;
+    color: white;
+  }
+  .itemsServicios .subItemServicio p {
+    font-size: calc(13px + 0.4vh);
+    margin-trim: 10px;
+  }
+  .itemsServicios .subItemServicio p:hover {
+    text-decoration: underline;
+  }
+}
+@media screen and (min-width: 992px) {
+  .itemsServicios {
+    width: 14%;
+    height: 0%;
+  }
+}
+
+.itemsServicios:hover {
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+}
+@media screen and (min-width: 992px) {
+  .itemsServicios:hover {
+    width: 14%;
+    height: 38%;
+  }
+}
+
+.itemsServiciosOn {
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+}
+@media screen and (min-width: 992px) {
+  .itemsServiciosOn {
+    width: 14%;
+    height: 38%;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 210px;
+  background-color: #212227;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  bottom: 0;
+}
+.footer .contFooter {
+  widows: 90%;
+  text-align: center;
+  color: white;
+}
+.footer .contFooter .textFooter {
+  padding: 3px;
+}
+
+@media screen and (min-width: 992px) {
+  .footer {
+    width: 100%;
+    height: 100px;
+    background-color: #212227;
+    bottom: 0px;
+  }
+  .footer .contFooter {
+    widows: 90%;
+    color: white;
+  }
+  .footer .contFooter .textFooter {
+    padding: 15px;
+    display: inline-block;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */

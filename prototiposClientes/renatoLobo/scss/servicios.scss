@@ -1,0 +1,91 @@
+.cover {
+    margin-top: 60px;
+    width: 100%;
+    margin-bottom: 20px;
+    .left {
+        width: 100%;
+        height: 60vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        .contInfo {
+            width: 90%;
+            .tittle {
+                font-size: calc(14px + 2vh);
+                font-weight: 600;
+            }
+            .infoService {
+                font-size: calc(14px + 1vh);
+            }
+            @media screen and(min-width:992px) {
+                .tittle {
+                    font-size: calc(20px + 2vh);
+                    letter-spacing: -1px;
+                    font-weight: 700;
+                }
+                .infoService {
+                    font-size: calc(20px + 1vh);
+                }
+            }
+        }
+    }
+    .right {
+        width: 100%;
+        height: 50vh;
+        //background-color: red;
+        .contentImg {
+            width: 90%;
+            height: 45%;
+            margin: 0 auto;
+            background-color: green;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .contentImg3,
+        .contentImg4 {
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+        }
+        .contentImg1 {
+            background-image: url("../media/servicio6.JPG");
+        }
+        .contentImg2 {
+            background-image: url("../media/servicio1.JPG");
+        }
+        .contentImg3 {
+            background-image: url("../media/servicio2.JPG");
+        }
+        .contentImg4 {
+            background-image: url("../media/servicio4.JPG");
+        }
+    }
+    @media screen and(min-width:992px) {
+        margin-bottom: 20px;
+        .left {
+            width: 50%;
+            height: 100vh;
+            float: left;
+        }
+        .right {
+            width: 50%;
+            height: 100vh;
+            float: left;
+            //background-color: red;
+            .contentImg1,
+            .contentImg2,
+            .contentImg3,
+            .contentImg4 {
+                width: 50%;
+                height: 50%;
+                overflow: hidden;
+                float: left;
+                margin: 0;
+                //background-color: green;
+            }
+        }
+    }
+}

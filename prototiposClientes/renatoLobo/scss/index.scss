@@ -1,0 +1,273 @@
+@mixin centrado() {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+$color1: rgba(14, 92, 192, 1);
+$color2: #212227;
+.cover {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    .slider {
+        width: 100%;
+        height: 100%;
+        //overflow: scroll;
+        z-index: 10;
+        overflow: hidden;
+        .contSlide {
+            width: 100%;
+            height: 0%;
+            //background-color: yellow;
+            display: inline-block;
+            opacity: 0;
+            transition: 0.7s;
+            position: absolute;
+            bottom: 0;
+        }
+        .contSlide1 {
+            background-color: tomato;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-image: url("../media/DSC_0707\ copia.jpg");
+        }
+        .contSlide2 {
+            background-color: orange;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-image: url("../media/Foto\ de\ inicio.jpg");
+        }
+        .contSlide3 {
+            background-color: darkblue;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-image: url("../media/DSC_0658\ copia.jpg");
+        }
+        .contSlideActive {
+            opacity: 1;
+            height: 100%;
+        }
+        .contSlide {
+            .taparImgSlide {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.65);
+                @include centrado();
+                .contenidoSlide {
+                    .textSlide {
+                        width: 90%;
+                        margin: 0 auto;
+                        color: white;
+                        font-size: calc(20px + 2vh);
+                        text-align: center;
+                        opacity: 0;
+                        transition: 1s;
+                        font-weight: 400;
+                        transition-delay: 1s;
+                    }
+                    span {
+                        font-weight: 700;
+                    }
+                    .textSlideActive {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        @media screen and(min-width:992px) {
+            .contSlide {
+                .taparImgSlide {
+                    .contenidoSlide {
+                        // transform: translateX(-20%);
+                        width: 40%;
+                        font-size: calc(20px + 3vh);
+                    }
+                    .contenidoSlide1 {
+                        text-align: left;
+                        margin-left: -30%;
+                    }
+                    .contenidoSlide3 {
+                        text-align: right;
+                        margin-right: -30%;
+                    }
+                }
+            }
+        }
+        .contentCircle {
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            //background-color: green;
+            bottom: 0;
+            z-index: 10000;
+            z-index: 11;
+            @include centrado();
+            .circle {
+                margin: 5px;
+                width: calc(5px + 0.4vh);
+                height: calc(5px + 0.4vh);
+                border-radius: 100%;
+                background-color: white;
+                display: inline-block;
+                transition: 0.4s;
+                cursor: pointer;
+            }
+            .circleActive {
+                width: calc(9px + 1vh);
+                height: calc(9px + 1vh);
+                cursor: auto;
+            }
+        }
+    }
+    //contentCircle
+}
+
+@media screen and(min-width:992px) {
+    .cover {
+        width: 100%;
+        height: 60vh;
+        transform: translateY(0px);
+        margin-top: 60px;
+        background-color: white;
+    }
+}
+
+////////////////////////////////////
+////////////////////// servicios
+////////////////////////////////////
+.servicios {
+    width: 100%;
+    @include centrado();
+    .allService {
+        width: 90%;
+        .contServicio {
+            width: 100%;
+            height: 140px;
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            .contInfoServicios {
+                width: 100%;
+                height: 100%;
+                background-color: rgb(13, 184, 13);
+                border-radius: 15px;
+                @include centrado();
+                .serviceTxt {
+                    padding: 5px;
+                    //color: $color2;
+                    color: white;
+                    text-align: center;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    @media screen and(min-width:992px) {
+        .allService {
+            .contServicio {
+                width: 25%;
+                height: 140px;
+                display: inline-block;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                float: left;
+                @include centrado();
+                .contInfoServicios {
+                    width: 90%;
+                    height: 80%;
+                    // background-color: red;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+////////////////////////////////////
+////////////////////////marcas
+////////////////////////////////////
+.marcas {
+    width: 100%;
+    .tituloMarca {
+        width: 100%;
+        text-align: center;
+        .textMarca {
+            padding: 30px;
+            font-size: 27px;
+            font-weight: 500;
+            // color: $color1;
+            letter-spacing: -1px;
+        }
+    }
+    .contMarcas {
+        width: 90%;
+        margin: auto;
+        .contMarca {
+            width: 100%;
+            height: 130px;
+            background-color: re;
+            // border: 1px solid green;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            @include centrado();
+            img {
+                height: 100%;
+                margin: 0 auto;
+            }
+            .imgRare {
+                height: auto;
+                width: 80%;
+            }
+        }
+    }
+    @media screen and(min-width:992px) {
+        .contMarcas {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            margin: 0 auto;
+            overflow: hidden;
+            .contMarca {
+                width: 33.14%;
+                height: 120px;
+                border: none;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                text-align: center;
+                float: left;
+                @include centrado();
+                img {
+                    height: 100%;
+                    margin: 0;
+                }
+                .imgRare {
+                    width: auto;
+                    height: 60%;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and(min-width:992px) {
+    .marcas {
+        width: 100%;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.18);
+        .tituloMarca {
+            text-align: center;
+            .textMarca {
+                color: $color2;
+                font-size: calc(25px + 2vh);
+            }
+        }
+    }
+}

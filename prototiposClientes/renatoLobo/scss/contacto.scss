@@ -1,0 +1,104 @@
+@mixin centrado() {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+$color1: rgba(14, 92, 192, 1);
+$color2: #212227;
+.cover {
+    width: 100%;
+    margin-top: 60px;
+    position: static;
+    .leftCover {
+        width: 100%;
+        overflow: hidden;
+        height: 0px;
+        position: absolute;
+    }
+    .rightCover {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+    .leftCover,
+    .rightCover {
+        @include centrado();
+        .contInfo {
+            width: 80%;
+            height: 80%;
+            @include centrado();
+            form {
+                p {
+                    font-weight: 700;
+                    color: $color1;
+                    //  color: white;
+                    font-size: 25px;
+                    letter-spacing: -1px;
+                    margin-bottom: 10px;
+                    text-align: left;
+                }
+                label,
+                input {
+                    display: block;
+                }
+                label {
+                    font-size: 20px;
+                    color: $color2;
+                    margin-bottom: px;
+                }
+                input {
+                    width: 100%;
+                    height: 22px;
+                    border: none;
+                    border: 1px solid $color1;
+                    color: 18px;
+                    margin-bottom: 10px;
+                }
+                textarea {
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 130px;
+                    max-height: 130px;
+                    border: 1px solid $color1;
+                }
+                .btnForm {
+                    width: 100%;
+                    height: 40px;
+                    background-color: $color1;
+                    color: white;
+                    margin-top: 10px;
+                    border: none;
+                    border-radius: 7px;
+                }
+            }
+        }
+    }
+    @media screen and(min-width:992px) {
+        .leftCover {
+            height: 100vh;
+            width: 50%;
+            position: relative;
+            float: left;
+        }
+        .rightCover {
+            float: left;
+            width: 50%;
+            height: 100vh;
+            position: relative;
+            @include centrado();
+            .contInfo {
+                width: 100%;
+                height: auto;
+                text-align: left;
+                // background-color: red;
+                form {
+                    float: left;
+                    margin-left: -40%;
+                    width: 60%;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}

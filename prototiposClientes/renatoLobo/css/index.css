@@ -1,0 +1,255 @@
+.cover {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.cover .slider {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  overflow: hidden;
+}
+.cover .slider .contSlide {
+  width: 100%;
+  height: 0%;
+  display: inline-block;
+  opacity: 0;
+  transition: 0.7s;
+  position: absolute;
+  bottom: 0;
+}
+.cover .slider .contSlide1 {
+  background-color: tomato;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../media/DSC_0707 copia.jpg");
+}
+.cover .slider .contSlide2 {
+  background-color: orange;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../media/Foto de inicio.jpg");
+}
+.cover .slider .contSlide3 {
+  background-color: darkblue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../media/DSC_0658 copia.jpg");
+}
+.cover .slider .contSlideActive {
+  opacity: 1;
+  height: 100%;
+}
+.cover .slider .contSlide .taparImgSlide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.cover .slider .contSlide .taparImgSlide .contenidoSlide .textSlide {
+  width: 90%;
+  margin: 0 auto;
+  color: white;
+  font-size: calc(20px + 2vh);
+  text-align: center;
+  opacity: 0;
+  transition: 1s;
+  font-weight: 400;
+  transition-delay: 1s;
+}
+.cover .slider .contSlide .taparImgSlide .contenidoSlide span {
+  font-weight: 700;
+}
+.cover .slider .contSlide .taparImgSlide .contenidoSlide .textSlideActive {
+  opacity: 1;
+}
+@media screen and (min-width: 992px) {
+  .cover .slider .contSlide .taparImgSlide .contenidoSlide {
+    width: 40%;
+    font-size: calc(20px + 3vh);
+  }
+  .cover .slider .contSlide .taparImgSlide .contenidoSlide1 {
+    text-align: left;
+    margin-left: -30%;
+  }
+  .cover .slider .contSlide .taparImgSlide .contenidoSlide3 {
+    text-align: right;
+    margin-right: -30%;
+  }
+}
+.cover .slider .contentCircle {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  z-index: 10000;
+  z-index: 11;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.cover .slider .contentCircle .circle {
+  margin: 5px;
+  width: calc(5px + 0.4vh);
+  height: calc(5px + 0.4vh);
+  border-radius: 100%;
+  background-color: white;
+  display: inline-block;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.cover .slider .contentCircle .circleActive {
+  width: calc(9px + 1vh);
+  height: calc(9px + 1vh);
+  cursor: auto;
+}
+
+@media screen and (min-width: 992px) {
+  .cover {
+    width: 100%;
+    height: 60vh;
+    transform: translateY(0px);
+    margin-top: 60px;
+    background-color: white;
+  }
+}
+.servicios {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.servicios .allService {
+  width: 90%;
+}
+.servicios .allService .contServicio {
+  width: 100%;
+  height: 140px;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.servicios .allService .contServicio .contInfoServicios {
+  width: 100%;
+  height: 100%;
+  background-color: #0db80d;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.servicios .allService .contServicio .contInfoServicios .serviceTxt {
+  padding: 5px;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+}
+@media screen and (min-width: 992px) {
+  .servicios .allService .contServicio {
+    width: 25%;
+    height: 140px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .servicios .allService .contServicio .contInfoServicios {
+    width: 90%;
+    height: 80%;
+    color: white;
+  }
+}
+
+.marcas {
+  width: 100%;
+}
+.marcas .tituloMarca {
+  width: 100%;
+  text-align: center;
+}
+.marcas .tituloMarca .textMarca {
+  padding: 30px;
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+.marcas .contMarcas {
+  width: 90%;
+  margin: auto;
+}
+.marcas .contMarcas .contMarca {
+  width: 100%;
+  height: 130px;
+  background-color: re;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.marcas .contMarcas .contMarca img {
+  height: 100%;
+  margin: 0 auto;
+}
+.marcas .contMarcas .contMarca .imgRare {
+  height: auto;
+  width: 80%;
+}
+@media screen and (min-width: 992px) {
+  .marcas .contMarcas {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .marcas .contMarcas .contMarca {
+    width: 33.14%;
+    height: 120px;
+    border: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .marcas .contMarcas .contMarca img {
+    height: 100%;
+    margin: 0;
+  }
+  .marcas .contMarcas .contMarca .imgRare {
+    width: auto;
+    height: 60%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .marcas {
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.18);
+  }
+  .marcas .tituloMarca {
+    text-align: center;
+  }
+  .marcas .tituloMarca .textMarca {
+    color: #212227;
+    font-size: calc(25px + 2vh);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
