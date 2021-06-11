@@ -1,0 +1,21 @@
+{
+  "Telecomunicaciones" :[
+    {
+      "minMatematicas": 550,
+      "minLenguaje": 400,
+      "minCiencia": 300,
+      "minFisica": 0,
+   }
+  ],
+  
+  "Publicidad" :[
+    {
+      "minMatematicas": 300,
+      "minLenguaje": 550,
+      "minCiencia": 300,
+      "minFisica": 0,
+   }
+  ],
+  
+  
+}
